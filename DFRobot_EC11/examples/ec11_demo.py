@@ -12,11 +12,10 @@ pos: ec11 position
 ec11_time: one step time(us)
 is_pressed: button status
 if this function is called
-if pos changed and call this function, is_pressed will be 2
-if button changed and call this function, is_pressed will be 0
+if dir == 0, button pressed called this function, else position changed called this function
 '''
 def ec11_callBack(dir, pos, ec11_time, is_pressed):
-  if is_pressed == 2:
+  if dir != 0:
     print("direction is: %d, position at %d, spend %d us" %(dir, pos, ec11_time))
   else:
     print("button change to %d" %is_pressed)
