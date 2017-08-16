@@ -10,7 +10,7 @@ led = Pin(2, Pin.OUT)
 dir: 1 :C.W, else anti-Clock
 pos: ec11 position
 ec11_time: one step time(us)
-button: button status
+is_pressed: button status
 if this function is called
 if pos changed and call this function, is_pressed will be 2
 if button changed and call this function, is_pressed will be 0
