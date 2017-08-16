@@ -33,7 +33,7 @@ class EC11:
         self.dir = -1
       self.time = time.ticks_us() - self.lastTime
       self.lastTime = time.ticks_us()
-      self.cbFun(self.dir, self.pos, self.time, 2)
+      self.cbFun(self.dir, self.pos, self.time, self.pinC.value())
   
   def IRQHandler_pinC(self, arg):
     self.cbFun(0, 0, 0, 0)
