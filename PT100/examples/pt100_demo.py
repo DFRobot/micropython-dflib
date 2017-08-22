@@ -7,8 +7,7 @@ led = Pin(2, Pin.OUT)
 
 
 #36: analog pin
-#1:  refer to volatage
-obj_pt100 = pt100.PT100(36, 1)
+obj_pt100 = pt100.PT100(36)
 
 while True:
   
