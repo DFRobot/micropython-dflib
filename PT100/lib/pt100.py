@@ -44,9 +44,9 @@ class PT100:
     , 240.18, 240.52, 240.87, 241.22, 241.56, 241.91, 242.26, 242.6, 242.95, 243.29
     , 243.64, 243.99, 244.33, 244.68, 245.02, 245.37, 245.71, 246.06, 246.4, 246.75]
   
-  def __init__(self, pin, voltageRef):
+  def __init__(self, pin):
     self.pin = ADC(Pin(pin))
-    self.voltageRef = voltageRef
+    self.voltageRef = 3.3
 
   def comp(self, pt, i):
     if (pt - self.pt100_list[i]) > (self.pt100_list[i + 1] - self.pt100_list[i] / 2):
