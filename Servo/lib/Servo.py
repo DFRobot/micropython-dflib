@@ -17,7 +17,7 @@ class Servo:
   def angle(self,ang):
 #    self.turn = ang*(195/180) + 60
     if ang >= 180:
-      ang=179
+      ang=180
     if ang < 0:
       ang=0
     
