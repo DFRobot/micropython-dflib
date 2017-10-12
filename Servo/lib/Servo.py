@@ -6,7 +6,7 @@ class Servo:
   def __init__(self,pin):
     self.pwm = PWM(Pin(pin),freq=50)
     self.max=self._map(2.4,0,20,0,1024)
-    self.min=self._map(0.55,0,20,0,1024)
+    self.min=self._map(0.65,0,20,0,1024)
     
     self.angle(0)
     self.id = pin
