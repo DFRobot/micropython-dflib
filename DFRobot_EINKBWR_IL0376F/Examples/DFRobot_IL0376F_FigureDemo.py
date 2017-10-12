@@ -1,5 +1,5 @@
 from machine import Pin,SPI
-import DFRobot_IL0376F
+import DFRobot_EINKBWR_IL0376F
 import time
 #Pin definition
 EINK_CS = 26
@@ -7,14 +7,14 @@ Font_CS = 10
 EINK_DC = 5
 BUSY    = 13
 #color
-LUCENCY = DFRobot_IL0376F.LUCENCY
-WHITE   = DFRobot_IL0376F.WHITE
-BLACK   = DFRobot_IL0376F.BLACK
-RED     = DFRobot_IL0376F.RED
+LUCENCY = DFRobot_EINKBWR_IL0376F.LUCENCY
+WHITE   = DFRobot_EINKBWR_IL0376F.WHITE
+BLACK   = DFRobot_EINKBWR_IL0376F.BLACK
+RED     = DFRobot_EINKBWR_IL0376F.RED
 x=12
 
 spi = SPI(baudrate=100000, polarity=1, phase=0, sck=Pin(18), mosi=Pin(23), miso=Pin(19))
-eink_IL0376F = DFRobot_IL0376F.IL0376F(spi,EINK_CS,Font_CS,EINK_DC,BUSY)
+eink_IL0376F = DFRobot_EINKBWR_IL0376F.IL0376F(spi,EINK_CS,Font_CS,EINK_DC,BUSY)
 
 while True:
   #Clear the screen and display white
@@ -36,6 +36,6 @@ while True:
   eink_IL0376F.drawCircle(160,51,30,1,BLACK)
   #Refresh screen display
   eink_IL0376F.disRefresh()
-  time.sleep(8000)
+  time.sleep(5)
 
 

@@ -35,7 +35,7 @@ class Device:
     
   def stateScan(self):
     while(not self.BUSY.value()):
-      pass
+	  pass
 
   def spiWriteByte(self, ddd):
     value=bytearray(1)
