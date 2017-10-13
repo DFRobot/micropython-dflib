@@ -10,8 +10,8 @@ try:
     sv1.angle(0)
     sv2.angle(0)
     time.sleep(2)
-    sv1.angle(170)
-    sv2.angle(170)
+    sv1.angle(180)
+    sv2.angle(180)
     time.sleep(2)
 except:
   sv1.deinit()
