@@ -110,7 +110,7 @@ class IL0376F:
     else:
       print("no color!")
 
-  def disRefresh(self):
+  def flush(self):
     if(eInkdev["scandir"] == EInk_scan_Dir3):
       self.powerOn()
       self._device.wirteCmd(0x10)

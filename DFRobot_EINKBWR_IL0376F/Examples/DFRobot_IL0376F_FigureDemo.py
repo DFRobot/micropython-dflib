@@ -35,7 +35,7 @@ while True:
   #Draw a solid circle
   eink_IL0376F.drawCircle(160,51,30,1,BLACK)
   #Refresh screen display
-  eink_IL0376F.disRefresh()
+  eink_IL0376F.flush()
   time.sleep(5)
 
 

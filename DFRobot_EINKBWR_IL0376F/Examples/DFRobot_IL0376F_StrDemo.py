@@ -21,6 +21,6 @@ while True:
   #Displays a string, red font
   eink_IL0376F.disStr(12,12,"三色电子墨水屏中文显示测试程序",RED);
   #Refresh screen display
-  eink_IL0376F.disRefresh()
+  eink_IL0376F.flush()
   time.sleep(5)
 
